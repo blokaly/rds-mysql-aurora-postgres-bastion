@@ -5,8 +5,8 @@
 #
 
 # AWS variables
-AWS_PROFILE=default
-AWS_REGION=eu-west-3
+AWS_PROFILE=terraform
+AWS_REGION=ap-southeast-1
 # project name
 PROJECT_NAME=rds-mysql-private
 MYSQL_USERNAME=admin

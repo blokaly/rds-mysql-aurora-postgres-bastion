@@ -13,3 +13,4 @@ config/uuid
 frontend/website/build/
 uiConfig.json
 converted.jpg
+.idea

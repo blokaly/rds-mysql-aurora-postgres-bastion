@@ -1,12 +1,12 @@
 resource "aws_db_instance" "db_instance" {
   allocated_storage    = 10
   engine               = "mysql"
-  engine_version       = "5.7"
+  engine_version       = "8.0"
   instance_class       = "db.t2.micro"
   identifier           = var.mysql_identifier
   username             = var.mysql_username
   password             = var.mysql_password
-  parameter_group_name = "default.mysql5.7"
+  parameter_group_name = "default.mysql8.0"
 
   # https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/db_instance#db_subnet_group_name
   db_subnet_group_name = aws_db_subnet_group.db_subnet_group.name

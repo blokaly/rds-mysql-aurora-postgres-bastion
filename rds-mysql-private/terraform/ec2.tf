@@ -36,7 +36,7 @@ resource "aws_security_group" "instance" {
     to_port   = 22
     # https://stackoverflow.com/a/53782560
     # https://stackoverflow.com/a/68833352
-    cidr_blocks = ["${data.http.my_ip.body}/32"]
+    cidr_blocks = ["${data.http.my_ip.response_body}/32"]
   }
 
   egress {

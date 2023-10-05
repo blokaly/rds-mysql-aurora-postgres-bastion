@@ -1,9 +1,12 @@
 # https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/availability_zones#attributes-reference
 data "aws_availability_zones" "zones" {}
 
-# https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/subnet_ids#attributes-reference
-data "aws_subnet_ids" "subnets" {
-  vpc_id = module.vpc.vpc_id
+# https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/subnets#attribute-reference
+data "aws_subnets" "subnets" {
+  filter {
+    name = "vpc-id"
+    values = [module.vpc.vpc_id]
+  }
 
   depends_on = [
     module.vpc
